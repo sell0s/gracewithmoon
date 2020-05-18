@@ -5,7 +5,7 @@ node_modules
 dist
 
 # Configuration
-# tidory.config.js
+tidory.config.js
 
 # VSCode
 .vscode
