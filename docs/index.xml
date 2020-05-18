@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+   <information>
+      <name>혜달스킨</name>
+      <version>0.1</version>
+      <description>
+         <![CDATA[세계여행 블로그인 혜달부부 지구별탐방기 스킨입니다.]]>
+      </description>
+      <license>
+         <![CDATA[MIT]]>
+      </license>
+   </information>
+   <author>
+      <name>sell0s</name>
+      <homepage>http://www.gracewithmoon.tistory.com</homepage>
+      <email>sell0s@naver.com</email>
+   </author>
+   <default>
+      <entriesOnPage>8</entriesOnPage>
+		<entriesOnList>8</entriesOnList>
+		<recentEntries>5</recentEntries>
+		<recentComments>4</recentComments>
+		<recentTrackbacks>4</recentTrackbacks>
+		<itemsOnGuestbook>10</itemsOnGuestbook>
+		<tagsInCloud>30</tagsInCloud>
+		<sortInCloud>3</sortInCloud>
+		<expandComment>1</expandComment>
+		<lengthOfRecentNotice>25</lengthOfRecentNotice>
+		<lengthOfRecentEntry>27</lengthOfRecentEntry>
+		<lengthOfRecentComment>30</lengthOfRecentComment>
+		<lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+		<lengthOfLink>30</lengthOfLink>
+		<showListOnCategory>1</showListOnCategory>
+		<showListOnArchive>1</showListOnArchive>
+		<commentMessage>
+			<none>0</none>
+			<single>1</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>0</none>
+			<single>1</single>
+		</trackbackMessage>
+		<tree>
+			<color>000000</color>
+			<bgColor>ffffff</bgColor>
+			<activeColor>000000</activeColor>
+			<activeBgColor>eeeeee</activeBgColor>
+			<labelLength>27</labelLength>
+			<showValue>1</showValue>
+		</tree>
+		<contentWidth>1600</contentWidth>
+      <cover>
+         <![CDATA[
+            [
+               {
+                  "name": "thumb-special",
+                  "title": "우리는 지금 여기에 살아있다",
+                  "dataType": "RECENT",
+                  "data": {
+                     "category": "ALL",
+                     "size": 5
+                  }
+               }
+            ]
+         ]]>
+      </cover>
+   </default>
+   <cover>
+      <item>
+         <name>thumb-special</name>
+         <label><![CDATA[스페셜 썸네일 리스트]]></label>
+         <description><![CDATA[독특한 썸네일 리스트 입니다.]]]></description>
+      </item>
+   </cover>
+</skin>

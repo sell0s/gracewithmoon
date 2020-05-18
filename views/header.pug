@@ -1,0 +1,67 @@
+header#header
+    nav
+        a#nav-brand(href='#')
+            img(src='./images/nav-logo.png')
+        a#nav-title(href='#') 혜달부부 지구별탐방기
+        #nav-menu
+            a(href="#") HOME
+            a(href="#") ABOUT
+            a(href="#") STORY
+            a(href="#") CONTACT
+        a#nav-toggle(href="#")
+            include icons/menu
+            
+
+script.
+    window.addEventListener('scroll', (() => {
+        var header = document.getElementById('header');
+        header.offsetHeight < window.pageYOffset ? header.classList.add("header-scrolled") : header.classList.remove("header-scrolled");
+    }), { passive: true });
+
+style.
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: transparent;
+        transition: height .2s ease, background-color .2s ease;
+    }
+    header > nav {
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+    }
+    header > nav a {
+        color: var(--color-white);
+        margin-left: 1.5rem;
+    }
+    header > nav #nav-brand {
+        margin-left: 0;
+    }
+    header > nav #nav-brand img {
+        height: 6rem;
+        transition: height .2s ease;
+    }
+    header > nav #nav-title {
+        font-size: 1.5rem;
+    }
+    header > nav #nav-menu {
+        margin-left: auto;
+    }
+    header > nav #nav-menu a {
+        margin-left: 1.5rem;
+    }
+    header > nav #nav-toggle {
+        padding-top: 0.3rem;
+        margin-left: 3rem;
+    }
+    header > nav #nav-toggle svg {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .header-scrolled {
+        background-color: var(--color-base)
+    }
+    .header-scrolled > nav #nav-brand img {
+        height: 3.5rem;
+    }

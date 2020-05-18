@@ -1,0 +1,16 @@
+# Modules
+node_modules
+
+# Distribution
+dist
+
+# Configuration
+# tidory.config.js
+
+# VSCode
+.vscode
+dev
+
+# ignore local repository tidory.config.js
+# $ git update-index --assume-unchanged {filename}
+# $ git update-index --no-assume-unchanged {filename}

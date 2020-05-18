@@ -1,0 +1,64 @@
+-
+    //- var blogUrl = 'https://gracewithmoon.tistory.com';
+    var blogUrl = 'http://localhost:8080';
+    var youtubeUrl = 'https://www.youtube.com/embed/FJ3bmKVa6DI';
+
+section#cover-timer
+    iframe#cover-player(src=youtubeUrl + '?controls=0&loop=1&enablejsapi=1' frameborder='0' allow='autoplay' allowfullscreen)
+
+script.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var ytplayer;
+    function onYouTubeIframeAPIReady() {
+        ytplayer = new YT.Player('cover-player', {
+            playerVars: { 'origin': document.location.origin },
+            events: {
+                'onReady': (event) => {
+                    event.target.playVideo();
+                    console.log('onReady');
+                },
+                'onStateChange': (event) => {
+                    console.log('CHANGE ' + event.data);
+                    if(event.data == -1) {
+                        ytplayer.playVideo();
+                        console.log('try');
+                    }
+                }
+            }
+        });
+    }
+    window.addEventListener('scroll', () => {
+        var doc = document;
+        var pageOffset = window.pageYOffset;
+        var offset = doc.getElementById('cover-timer').offsetHeight - doc.getElementById('header').offsetHeight;
+        if (pageOffset < offset) {
+            ytplayer.getPlayerState() == 1 ? 0 : resume();
+        }
+        else {
+            ytplayer.getPlayerState() == 1 ? pause() : 0;
+
+        }
+    });
+    function pause() {
+        ytplayer.pauseVideo();
+        console.log('pause');
+    }
+    function resume() {
+        ytplayer.playVideo();
+        console.log('resume');
+    }
+    
+style.
+    #cover-timer {
+        width: 100%;
+        height: 100vh;
+        background-color: yellow;
+    }
+    #cover-player {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
